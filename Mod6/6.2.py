@@ -12,5 +12,3 @@ def main():
     while luku !=maksimiluku:
         luku= noppa(tahkotnumero)
         print(f"Nopan luku on: {luku}")
-if __name__ == "__main__":
-    main()
