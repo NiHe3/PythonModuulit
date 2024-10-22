@@ -12,13 +12,12 @@ yhteys = mysql.connector.connect(
 
 def koordinaatit(icao_koodi):
     sql = (f"SELECT latitude_deg, longitude_deg FROM airports WHERE ident ='{icao_koodi}'")
-    print(sql)
     cursor = yhteys.cursor()
     cursor.execute(sql)
     tulo = cursor.fetchall()
     if cursor.rowcount > 0:
         if tulo:
-            return tulo
+            return (tulo['latitude_deg'], tulo['longitude_deg'])
         else:
             print("Virhe")
 def lasku(lentokentta1, lentokentta2):

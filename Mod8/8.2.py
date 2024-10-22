@@ -10,12 +10,18 @@ yhteys = mysql.connector.connect(
          autocommit=True
          )
 def hae_kentta(maakoodi):
-    sql =(f"SELECT type, COUNT(*) FROM airports WHERE iso_country ='{maakoodi}'")
-    print(sql)
+    sql =f'''
+    SELECT type, count(*) 
+    FROM airports 
+    WHERE iso_country ='{maakoodi}
+    GROUP BY type
+    ORDER BY count(*) DESC'''
+
     cursor=yhteys.cursor()
     cursor.execute(sql)
     tulo=cursor.fetchall()
-    if cursor.rowcount >0 :
+
+    if cursor.rowcount > 0 :
         if tulo:
           for asema, maara in tulo:
             print(f"{asema}:{maara}")
