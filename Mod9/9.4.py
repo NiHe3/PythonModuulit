@@ -1,6 +1,4 @@
 import random
-import pandas as pd
-
 class Auto:
     def __init__(self, tunnus, hnopeus, nopeus, kmatka):
         self.tunnus = tunnus
@@ -21,16 +19,10 @@ class Auto:
         matkalisaus=self.nopeus*tunti
         self.kmatka+=matkalisaus
 
-    def lajittele(self, lista):
-        return lista['kmatka']
-
 autot = []
 for i in range(1, 11):
     maxnopeus=random.randint(100,200)
     rekkari=f"ABC-{i}"
-    kuljettumatka=0
-    nopeus=0
-    autot.append(Auto(rekkari, maxnopeus, nopeus, kuljettumatka))
 
 kilpailu = True
 while kilpailu:
@@ -43,9 +35,3 @@ while kilpailu:
         if auto.kmatka >=10000:
             kilpailu = False
             break
-
-autot.sort(key=lambda auto: auto.kmatka, reverse=True)
-
-
-for auto in autot:
-    print(f'Rekisteri: {auto.tunnus}, Kuljettu matka: {auto.kmatka:.2f} km')
