@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yritys(tehtava)</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+body {
+   background-color: #DEC5C6;
+    color: #FFFCF2;
+    padding-top: 60px;
+}
+.navbarTOIMI {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+.navbar {
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7B9FCF;
+    padding: 10px 20px;
+    border-radius: 9px;
+}
+.logo img {
+    height: 40px;
+    width: auto;
+}
+.linkit {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding-right: 10px;
+}
+.linkit a {
+   color: #8EB1D9;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.linkit a:hover {
+    color: #003CA6;
+}
+.container  {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 9px;
+    padding: 20px;
+    background-color: #E8E6DF;
+    margin: 0 auto;
+    margin-top: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ContactInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 25px;
+    background-color: #ADC4DD;
+    height: 400px;
+}
+.kontakti, .kartta {
+    flex: 1;
+    padding: 10px;
+    overflow: auto;
+    border-radius: 8px;
+
+}
+.kartta {
+    margin-left: 20px;
+}
+h2 {
+    margin-bottom: 15px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0 ;
+    border-radius: 10px;
+
+}
+
+
+/* Responsiivuutta napattu aikasemmasta projektista */
+@media (max-width: 768px) {
+    .navbar {
+    flex-direction: column;
+    padding: 10px;
+    }
+    .linkit {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    }
+    .linkit a {
+    font-size: 1.2em;
+    }
+    .container {
+    width: 95%;
+    padding: 15px;
+    }
+    h2 {
+    font-size: 1.5em;
+    }
+    .kontakti {
+    font-size: 1em;
+    }
+}
+@media (max-width: 480px) {
+    /* responsiivisuus puhelimelle*/
+    .logo img {
+    height: 30px;
+    }
+    h2 {
+    font-size: 1.3em;
+    }
+    .linkit a {
+    font-size: 1em;
+    }
+    .container {
+    padding: 10px;
+    }
+    .kontakti {
+    font-size: 0.9em;
+    }
+}
+@media (min-width: 1200px) {
+ /* responsiivisuus isommalla näytöllä*/
+    .navbar,
+    .container {
+    max-width: 1200px;
+    }
+    .navbar {
+    padding: 15px 30px;
+    }
+    .container {
+    padding: 30px;
+        }
+    h2 {
+    font-size: 2em;
+    }
+    .kontakti {
+    font-size: 1.2em;
+        }
+}
+</style>
+</head>
+<body>
+
+<div class="navbarTOIMI">
+    <nav class="navbar">
+        <div class="logo">
+            <img src="mainlogo.jpg" alt="LOGO">
+        </div>
+        <ul class="linkit">
+            <li><a href="main.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<div class="container">
+    <div class="ContactInfo">
+        <div class="kontakti"> <h2>Ota Yhteyttä</h2>
+    <ul>
+        <li><strong>Tel.</strong> +358 10 4488 000</li>
+        <li><strong>Visiting address:</strong></li>
+        <li>Karakaari 7</li>
+        <li>02610 Espoo, Finland</li>
+        <li>P.O.Box 226, FI-00045 Nokia Group</li>
+        <li>olematonemail@email.com</li>
+    </ul>
+        </div>
+<div class="kartta">
+  <h2>Sijaitsemme</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.4882589627819!2d24.753233077543015!3d60.22229797505901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468df69ff687c3b9%3A0x8ca754b752c408b9!2sNokia%20Yhti%C3%B6!5e0!3m2!1sfi!2sfi!4v1730658422345!5m2!1sfi!2sfi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
