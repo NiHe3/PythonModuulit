@@ -1,9 +1,17 @@
 import requests
-import json
+
+
+avain ="76c21e8be95b7179a44459cfe09d13e3"
+
+pyynto = f"http://api.openweathermap.org/data/2.5/weather?"
 
 kysely = input(str("Minkä paikkakunnan sään haluat nähdä?"))
-avain ="76c21e8be95b7179a44459cfe09d13e3"
-pyyntö = f"http://api.openweathermap.org/data/2.5/weather?q={kysely}&appid={avain}"
-vastaus = requests.get(pyyntö).json()
-teksti = str(vastaus)
-print(teksti)
+
+
+def kelvin(k_temp):
+    return k_temp - 273.15
+
+def haku(kunta):
+    parametri = {
+        ""
+    }
